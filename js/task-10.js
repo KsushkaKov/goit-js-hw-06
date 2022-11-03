@@ -24,9 +24,10 @@ function createDivs() {
   boxes.append(...divToAdd);
 }
 
-onBtnCreate.addEventListener("click", createDivs);
-
-onBtnDestroy.addEventListener("click", () => {
+function destroyBoxes() {
   boxes.innerHTML = "";
   inputNum.value = "";
-});
+}
+
+onBtnCreate.addEventListener("click", createDivs);
+onBtnDestroy.addEventListener("click", destroyBoxes);
