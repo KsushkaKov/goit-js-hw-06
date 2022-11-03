@@ -19,13 +19,14 @@ const createBoxes = (amount) => {
   return divAmountToAdd;
 };
 
-function createDiv() {
+function createDivs() {
   let divToAdd = createBoxes(inputNum.value);
   boxes.append(...divToAdd);
 }
 
-onBtnCreate.addEventListener("click", createDiv);
+onBtnCreate.addEventListener("click", createDivs);
 
 onBtnDestroy.addEventListener("click", () => {
   boxes.innerHTML = "";
+  inputNum.value = "";
 });
